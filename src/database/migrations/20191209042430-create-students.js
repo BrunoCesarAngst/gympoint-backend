@@ -17,7 +17,7 @@ module.exports = {
         unique: true
       },
       age: {
-        type: Sequelize.FLOAT,
+        type: Sequelize.INTEGER,
         allowNull: false
       },
       weight: {
