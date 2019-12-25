@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize';
 
-import User from '../app/models/User';
 import Student from '../app/models/Student';
+import User from '../app/models/User';
 
 import databaseConfig from '../config/database';
 
@@ -16,6 +16,7 @@ class Database {
     this.connection = new Sequelize(databaseConfig);
 
     models.map(model => model.init(this.connection));
+    // models.map(model => model.associate && model.associate(this.connection));
   }
 }
 
