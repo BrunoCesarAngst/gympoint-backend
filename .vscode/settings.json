@@ -6,7 +6,14 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/.history": true,
-    ".history": true
+    ".history": true,
+    "**/nohup.out": true,
+    "*.out": true,
+    "nohup.out": true,
+    "**/*.out": true
   },
-  "explorerExclude.backup": null
+  "explorerExclude.backup": null,
+  "cSpell.words": [
+    "typeofplans"
+  ]
 }

@@ -52,8 +52,8 @@ class StudentController {
   }
 
   async index(req, res) {
-    const result = await Student.findAll();
-    return res.json(result);
+    const students = await Student.findAll();
+    return res.json(students);
   }
 
   async show(req, res) {
