@@ -17,8 +17,10 @@ class SessionController {
         .min(6)
     });
 
-    if (!(await schema.isValid(req.body))) {
-      return res.status(400).json({ error: 'Validation fails!' });
+    try {
+      await schema.validate(req.body, { abortEarly: false });
+    } catch (err) {
+      return res.status(400).json({ errors: err.errors });
     }
 
     const { email, password } = req.body;
