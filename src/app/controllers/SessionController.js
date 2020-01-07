@@ -48,6 +48,12 @@ class SessionController {
       })
     });
   }
+
+  async index(req, res) {
+    const authenticatedUsers = await User.findAll();
+
+    return res.json(authenticatedUsers);
+  }
 }
 
 export default new SessionController();

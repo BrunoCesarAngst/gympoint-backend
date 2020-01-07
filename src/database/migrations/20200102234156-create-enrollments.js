@@ -7,6 +7,14 @@ module.exports = {
         primaryKey: true,
         allowNull: false
       },
+      created_by: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'users',
+          key: 'id'
+        },
+        allowNull: false
+      },
       student_id: {
         type: Sequelize.INTEGER,
         references: {

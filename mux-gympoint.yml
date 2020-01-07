@@ -9,17 +9,16 @@ windows:
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
-      start directory: "${PWD}"
       panes:
         - logs:
           - xdg-open "${PWD}"
           - nohup code . &!
           - docker start dbgympoint
-          - # docker start mongobarber
+          - docker start mongogympoint
           - # docker start redisbarber
           - nohup insomnia &!
           - nohup postbird &!
-          - # nohup mongodb-compass-community &!
+          - nohup mongodb-compass-community &!
         - echo 'Oi Bruno'
         - yarn dev
         - # yarn queue
