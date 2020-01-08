@@ -9,6 +9,7 @@ import FileController from './app/controllers/FileController';
 import PlansController from './app/controllers/PlansController';
 import EnrollmentController from './app/controllers/EnrollmentController';
 import NotificationController from './app/controllers/NotificationController';
+import CheckinsController from './app/controllers/CheckinsController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -17,6 +18,9 @@ const uploads = multer(multerConfig);
 const routes = new Router();
 
 routes.post('/sessions', SessionController.store);
+
+routes.post('/students/:id/checkins', CheckinsController.store);
+routes.get('/students/:id/checkins', CheckinsController.index);
 
 /**
  * Area for authenticated users only
